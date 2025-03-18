@@ -734,6 +734,7 @@ ul{
     background: var(--color-white);
     padding: 20px 50px;
     border-radius: 10px;
+    align-content: center;
 }
 .press-slider__content img{
     background-color: var(--color-secondary);
