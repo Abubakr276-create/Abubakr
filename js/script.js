@@ -20,11 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (inView) {
             if (isScrollingDown) {
-                // Прокрутка вниз — прячем
                 curvedTitle.classList.add('animate');
                 console.log('Прокрутка вниз — скрываем заголовок');
             } else {
-                // Прокрутка вверх — показываем
                 curvedTitle.classList.remove('animate');
                 console.log('Прокрутка вверх — показываем заголовок');
             }
