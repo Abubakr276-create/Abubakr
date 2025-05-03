@@ -33,6 +33,32 @@ document.addEventListener("DOMContentLoaded", () => {
         lastScrollY = currentScrollY;
     });
 
+        // Алгоритм:
+        // 1. Получаем кнопку по ID.
+        // 2. При прокрутке страницы:
+        //    - Если прокрутка вниз более 300px — показываем кнопку.
+        //    - Иначе — скрываем.
+        // 3. При клике на кнопку — плавно прокручиваем страницу вверх.
+
+        const goTopBtn = document.getElementById('goTopBtn');
+
+        // Отслеживаем прокрутку страницы
+        window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+        goTopBtn.style.display = 'block';
+    } else {
+        goTopBtn.style.display = 'none';
+    }
+    });
+
+        // Обработка клика по кнопке
+        goTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Плавная прокрутка
+        });
+    });
+
     // Алгоритм:
     // 1. Находим все элементы <h3> на странице и сохраняем их в переменной.
     // 2. Создаем функцию isInViewport, которая проверяет, находится ли элемент в зоне видимости окна браузера.
