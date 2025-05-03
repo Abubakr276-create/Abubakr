@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 <div class="preloader">
@@ -134,39 +135,44 @@
                 <span class="curved-text">Сервисы</span>
                 <h2 class="title">что мы предлагаем</h2>
             </div>
-            <div class="offer__inner-articles">
-                <article class="offer__item">
-                    <img src="images/offer_2.webp" alt="Offer one">
-                    <div class="offer__item-inner">
-                        <span class="offer__item-icon"><i class="fa fa-paw"></i></span>
-                        <h3 class="dynamic-title">Семена</h3>
-                        <button class="btn">Подробнее</button>
+            <div class="swiper offer-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide offer__item">
+                        <img src="images/offer_2.webp" alt="Offer one" />
+                        <div class="offer__item-inner">
+                            <span class="offer__item-icon"><i class="fa fa-paw"></i></span>
+                            <h3 class="dynamic-title">Семена</h3>
+                            <button class="btn">Подробнее</button>
+                        </div>
                     </div>
-                </article>
-                <article class="offer__item">
-                    <img src="images/offer.webp" alt="Offer two">
-                    <div class="offer__item-inner">
-                        <span class="offer__item-icon"><i class="fa fa-paw"></i></span>
-                        <h3 class="dynamic-title">Селекция</h3>
-                        <button class="btn">Подробнее</button>
+                    <div class="swiper-slide offer__item">
+                        <img src="images/offer.webp" alt="Offer two" />
+                        <div class="offer__item-inner">
+                            <span class="offer__item-icon"><i class="fa fa-paw"></i></span>
+                            <h3 class="dynamic-title">Селекция</h3>
+                            <button class="btn">Подробнее</button>
+                        </div>
                     </div>
-                </article>
-                <article class="offer__item">
-                    <img src="images/offer_1.jpg" alt="Offer three">
-                    <div class="offer__item-inner">
-                        <span class="offer__item-icon"><i class="fa fa-paw"></i></span>
-                        <h3 class="dynamic-title">Удобрение</h3>
-                        <button class="btn">Подробнее</button>
+                    <div class="swiper-slide offer__item">
+                        <img src="images/offer_1.jpg" alt="Offer three" />
+                        <div class="offer__item-inner">
+                            <span class="offer__item-icon"><i class="fa fa-paw"></i></span>
+                            <h3 class="dynamic-title">Удобрение</h3>
+                            <button class="btn">Подробнее</button>
+                        </div>
                     </div>
-                </article>
-                <article class="offer__item">
-                    <img src="images/offer_3.jpg" alt="Offer four">
-                    <div class="offer__item-inner">
-                        <span class="offer__item-icon"><i class="fa fa-paw"></i></span>
-                        <h3 class="dynamic-title">Обработка</h3>
-                        <button class="btn">Подробнее</button>
+                    <div class="swiper-slide offer__item">
+                        <img src="images/offer_3.jpg" alt="Offer four" />
+                        <div class="offer__item-inner">
+                            <span class="offer__item-icon"><i class="fa fa-paw"></i></span>
+                            <h3 class="dynamic-title">Обработка</h3>
+                            <button class="btn">Подробнее</button>
+                        </div>
                     </div>
-                </article>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </div>
@@ -223,6 +229,10 @@
                 <h2>Автоматизации фермерского хозяйства</h2>
                 <span>Мы успешно реализовали проект по автоматизации фермерского хозяйства, внедрив современные технологии мониторинга и управления. В результате наши клиенты получили удобную систему контроля за посевами, прогноз погоды и оптимизацию полива, что повысило урожайность и снизило затраты.</span>
                 <button class="btn btn-press">Посмотреть все</button>
+                <form id="contactForm">
+                    <input type="text" name="name" placeholder="Ваше имя" required />
+                    <button class="btn btn-press" type="submit">Отправить</button>
+                </form>
             </div>
             <div class="press-slider__content">
                 <article class="press-slider__slide">
@@ -360,5 +370,6 @@
 <button id="goTopBtn" title="Вверх"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 </div>
 <script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
