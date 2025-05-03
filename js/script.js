@@ -3,8 +3,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log('Ура все работает')
 
-    const curvedTitle = document.querySelector('.big-slider .curved'); // Находим заголовок
-    let hasAnimated = false; // Флаг, чтобы анимация не повторялась
+    const curvedTitle = document.querySelector('.big-slider .curved');
+    let hasAnimated = false; 
 
     // Алгоритм:
     // 1. Отслеживаем событие прокрутки (scroll).
@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', () => {
         const rect = curvedTitle.getBoundingClientRect();
 
-        // Проверка, в зоне видимости ли элемент
         if (rect.top >= 0 && rect.bottom <= window.innerHeight && !hasAnimated) {
             curvedTitle.classList.add('animate');
             console.log('Анимация запущена! Прокрутка достигла элемента.');
