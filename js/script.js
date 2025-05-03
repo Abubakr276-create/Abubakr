@@ -1,10 +1,5 @@
 'use strict'
 
-setTimeout(() => {
-    document.querySelector('.preloader').style.display = 'none';
-    document.querySelector('.content').style.display = 'block';
-}, 2000);
-
 document.addEventListener("DOMContentLoaded", () => {
     console.log('Ура все работает')
 
