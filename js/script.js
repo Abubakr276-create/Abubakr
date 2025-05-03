@@ -20,11 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (inView) {
             if (isScrollingDown) {
-                // Прокрутка вниз — прячем
                 curvedTitle.classList.add('animate');
                 console.log('Прокрутка вниз — скрываем заголовок');
             } else {
-                // Прокрутка вверх — показываем
                 curvedTitle.classList.remove('animate');
                 console.log('Прокрутка вверх — показываем заголовок');
             }
@@ -42,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const goTopBtn = document.getElementById('goTopBtn');
 
-        // Отслеживаем прокрутку страницы
         window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
         goTopBtn.style.display = 'block';
@@ -51,11 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     });
 
-        // Обработка клика по кнопке
         goTopBtn.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' // Плавная прокрутка
+            behavior: 'smooth' 
         });
     });
 
@@ -69,29 +65,40 @@ document.addEventListener("DOMContentLoaded", () => {
     //    - Если да — добавляем класс 'fade-in' (элемент плавно появляется).
     //    - Если нет — удаляем класс 'fade-in' (по желанию, чтобы можно было снова анимировать при повторной прокрутке).
 
-    // 1. Получаем все <h3> элементы
         const h3Elements = document.querySelectorAll('h3');
 
-    // 2. Функция для проверки, в зоне ли видимости элемент
         function isInViewport(el) {
             const rect = el.getBoundingClientRect();
             return rect.top < window.innerHeight && rect.bottom > 0;
         }
 
-    // 3. Добавляем обработчик прокрутки
         window.addEventListener('scroll', () => {
-            // 4. Перебираем каждый <h3> элемент
             h3Elements.forEach(h3 => {
                 if (isInViewport(h3)) {
-                    // Если элемент виден — показываем его
                     h3.classList.add('fade-in');
                     console.log('Элемент <h3> в зоне видимости — показываем');
                 } else {
-                    // Если элемент вне зоны видимости — скрываем (опционально)
                     h3.classList.remove('fade-in');
                     console.log('Элемент <h3> вне зоны видимости — скрываем');
                 }
             });
         });
+
+        // Алгоритм:
+        // 1. Получаем элементы: иконку, попап и кнопку закрытия.
+        // 2. При клике на иконку — показываем popup.
+        // 3. При клике на кнопку ✖ — скрываем popup.
+
+        const searchIcon = document.getElementById('searchIcon');
+        const searchPopup = document.getElementById('searchPopup');
+        const closeSearch = document.getElementById('closeSearch');
+        
+        searchIcon.addEventListener('click', () => {
+        searchPopup.style.display = 'flex';
+    });
+        
+        closeSearch.addEventListener('click', () => {
+        searchPopup.style.display = 'none';
+    });
 });
 
