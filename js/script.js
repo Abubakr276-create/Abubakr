@@ -121,5 +121,41 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error('Ошибка загрузки JSON:', error);
         });
 
+    const swiper = new Swiper('.offer-swiper', {
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2
+            },
+            1024: {
+                slidesPerView: 3
+            }
+        }
+    });
+    const form = document.getElementById('contactForm');
+    const nameInput = form.elements['name'];
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const savedName = localStorage.getItem('formName');
+        if (savedName) {
+            nameInput.value = savedName;
+        }
+    });
+    
+    nameInput.addEventListener('input', () => {
+        localStorage.setItem('formName', nameInput.value);
+    });
+
+
 });
 
