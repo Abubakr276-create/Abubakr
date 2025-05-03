@@ -1,5 +1,10 @@
 'use strict'
 
+setTimeout(() => {
+    document.querySelector('.preloader').style.display = 'none';
+    document.querySelector('.content').style.display = 'block';
+}, 2000);
+
 document.addEventListener("DOMContentLoaded", () => {
     console.log('Ура все работает')
 
@@ -51,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         goTopBtn.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' 
+            behavior: 'smooth'
         });
     });
 
@@ -86,19 +91,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Алгоритм:
         // 1. Получаем элементы: иконку, попап и кнопку закрытия.
-        // 2. При клике на иконку — показываем popup.
-        // 3. При клике на кнопку ✖ — скрываем popup.
+        // 2. При клике на иконку — показываем попап.
+        // 3. При клике на кнопку ✖ — скрываем попап.
 
         const searchIcon = document.getElementById('searchIcon');
         const searchPopup = document.getElementById('searchPopup');
         const closeSearch = document.getElementById('closeSearch');
-        
+
         searchIcon.addEventListener('click', () => {
         searchPopup.style.display = 'flex';
     });
-        
+
         closeSearch.addEventListener('click', () => {
         searchPopup.style.display = 'none';
     });
+
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            const titleElements = document.querySelectorAll('.dynamic-title');
+
+            data.forEach((item, index) => {
+                if (titleElements[index]) {
+                    titleElements[index].textContent = item.title;
+                }
+            });
+        })
+        .catch(error => {
+            console.error('Ошибка загрузки JSON:', error);
+        });
+
 });
 
