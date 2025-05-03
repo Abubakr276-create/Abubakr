@@ -101,20 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
         searchPopup.style.display = 'none';
     });
 
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            const titleElements = document.querySelectorAll('.dynamic-title');
-
-            data.forEach((item, index) => {
-                if (titleElements[index]) {
-                    titleElements[index].textContent = item.title;
-                }
-            });
-        })
-        .catch(error => {
-            console.error('Ошибка загрузки JSON:', error);
-        });
 
 });
 
