@@ -1,13 +1,332 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аренда тракторов</title>
+    <title>Agro сделано с душой</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <heder>Шапка сайта</heder>
-<main>Основная информация</main>
-<footer>Подвал</footer>
+<header class="top-contacts">
+    <div class="top-contacts__container wrapper">
+        <div class="top-contacts__logo">Agro</div>
+        <div class="top-contacts__social">
+            <ul class="top-contacts__social social">
+                <li class="social__item">1</li>
+                <li class="social__item">2</li>
+                <li class="social__item">3</li>
+                <li class="social__item">4</li>
+            </ul>
+        </div>
+        <div class="top-contacts__info">
+            <ul class="top-contacts__info-list contacts">
+                <li class="contacts__item">
+                    <div class="contacts__item-inner">
+                        <span class="contacts__item-text-small">Телефон</span>
+                        <span>+1 111 111 11 11</span>
+                    </div>
+                </li>
+                <li class="contacts__item">
+                    <div class="contacts__item-inner">
+                        <span class="contacts__item-text-small">Почта</span>
+                        <span>admin@agro.ru</span>
+                    </div>
+                </li>
+                <li class="contacts__item">
+                    <div class="contacts__item-inner">
+                        <span class="contacts__item-text-small">Адрес</span>
+                        <span>Москва</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+<div class="top-menu-wrapper">
+    <nav class="top-menu wrapper">
+        <ul class="top-menu__list">
+            <li class="top-menu__item">Главная</li>
+            <li class="top-menu__item">О нас</li>
+            <li class="top-menu__item">Сервис</li>
+            <li class="top-menu__item">Проекты</li>
+            <li class="top-menu__item">Контакты</li>
+        </ul>
+        <div class="top-menu__right">
+            <div class="top-menu__search">Поиск</div>
+            <div class="top-menu__cart">Корзина</div>
+        </div>
+    </nav>
+</div>
+</header>
+<main>
+    <div class="big-slider">
+        <div class="big-slider__inner wrapper">
+            <span>Добро пожаловать на Agro</span>
+            <h1 class="curved">Наша большая семья будет рада помочь вам.</h1>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi blanditiis, debitis ducimus facere fuga id, laudantium maxime molestias nam nemo neque numquam odit omnis perferendis quos recusandae rerum temporibus.
+            <button class="btn big-slider__btn">Узнать подробнее</button>
+        </div>
+    </div>
+    <div class="articles wrapper">
+        <article class="articles__item">
+            <span class="curved-text">Текст один</span>
+            <h3>Лучшее для вас</h3>
+            <img width="500" height="400" src="images/article.png" alt="image one">
+        </article>
+        <article class="articles__item">
+            <span class="curved-text">Текст два</span>
+            <h3>Лучшее для вас</h3>
+            <img width="500" height="400" src="images/article_one.png" alt="image two">
+        </article>
+        <article class="articles__item">
+            <span class="curved-text">Текст три</span>
+            <h3>Лучшее для вас</h3>
+            <img width="500" height="400" src="images/article_two.png" alt="image three">
+        </article>
+    </div>
+
+    <div class="hero wrapper">
+        <div class="hero__images">
+            <div class="hero__images-big">
+                <img width="500" height="400" class="hero__images-big-inner" src="images/combine.jpg" alt="Image big">
+            </div>
+            <div class="hero__images-small">
+                <img width="500" height="400" class="hero__images-small-inner" src="images/man_le.jpg" alt="Image small">
+            </div>
+        </div>
+        <div class="hero__text">
+            <span class="curved-text">Курсив</span>
+            <h2 class="hero__title">Тайтл</h2>
+            <span class="hero__sub-title">Субтайтл</span>
+            <span class="hero__text-text">Какой то текст</span>
+            <div class="hero__text-cart">
+                <div class="hero__text-cart-inner">
+                    Фрукты
+                </div>
+                <div class="hero__text-cart-inner">
+                    Овощи
+                </div>
+            </div>
+            <div class="hero__text-goods">
+                <span> Преимущество 1</span>
+                <span> Преимущество 2</span>
+            </div>
+            <button class="btn">Больше</button>
+        </div>
+    </div>
+
+    <div class="offer">
+        <div class="offer__inner wrapper">
+            <div class="global-title">
+                <span class="curved-text">Сервисы</span>
+                <h2 class="title">что мы предлагаем</h2>
+            </div>
+            <div class="offer__inner-articles">
+                <article class="offer__item">
+                    <img width="500" height="400" src="images/offer_2.webp" alt="Offer one">
+                    <div class="offer__item-inner">
+                        <span class="offer__item-icon">Иконка</span>
+                        <h3>Продукт 1</h3>
+                        <button class="btn">Подробнее</button>
+                    </div>
+                </article>
+                <article class="offer__item">
+                    <img width="500" height="400" src="images/offer.webp" alt="Offer two">
+                    <div class="offer__item-inner">
+                        <span class="offer__item-icon">Иконка</span>
+                        <h3>Продукт 1</h3>
+                        <button class="btn">Подробнее</button>
+                    </div>
+                </article>
+                <article class="offer__item">
+                    <img width="500" height="400" src="images/offer_1.jpg" alt="Offer three">
+                    <div class="offer__item-inner">
+                        <span class="offer__item-icon">Иконка</span>
+                        <h3>Продукт 1</h3>
+                        <button class="btn">Подробнее</button>
+                    </div>
+                </article>
+                <article class="offer__item">
+                    <img width="500" height="400" src="images/offer_3.jpg" alt="Offer four">
+                    <div class="offer__item-inner">
+                        <span class="offer__item-icon">Иконка</span>
+                        <h3>Продукт 1</h3>
+                        <button class="btn">Подробнее</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <div class="video">
+        <div class="video__inner wrapper">
+            <ul class="video__nav">
+                <li>Видео 1</li>
+                <li>Видео 2</li>
+                <li>Видео 3</li>
+                <li>Видео 4</li>
+            </ul>
+        </div>
+        <div class="video__bg">
+            <div class="video__bg-text">
+                <h2>SOme awesome text</h2>
+                <span class="video__play-btn">Плей</span>
+            </div>
+            <img width="500" height="400" src="images/video_bg.jpg" alt="Video">
+        </div>
+    </div>
+
+    <div class="explore-projects">
+        <div class="explore-projects__inner wrapper">
+            <div class="global-title">
+                <span class="curved-text">Курсив</span>
+                <h2>Тайтл какой то</h2>
+            </div>
+             <div class="explore-projects__articles">
+                <article class="explore-projects__item">
+                    <img width="500" height="400" src="images/proj.webp" alt="One">
+                    <h3 class="explore-projects__item-title">Project 1</h3>
+                </article>
+                <article class="explore-projects__item">
+                    <img width="500" height="400" src="images/proj1.jpg" alt="Two">
+                    <h3 class="explore-projects__item-title">Project 2</h3>
+                </article>
+                <article class="explore-projects__item">
+                    <img width="500" height="400" src="images/proj2.jpg" alt="Three">
+                    <h3 class="explore-projects__item-title">Project 3</h3>
+                </article>
+                <article class="explore-projects__item">
+                    <img width="500" height="400" src="images/proj3.webp" alt="Four">
+                    <h3 class="explore-projects__item-title">Project 3</h3>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <div class="press-slider">
+        <div class="press-slider__inner wrapper">
+            <div class="press-slider__title">
+                <span class="curved-text">Завершенные проекты</span>
+                <h2>Title</h2>
+                <span>Some text</span>
+                <button class="btn btn-press">Посмотреть все</button>
+            </div>
+            <div class="press-slider__content">
+                <article class="press-slider__slide">
+                    <div class="press-slider__slide-content">
+                        <h3>Пост 1</h3>
+                        <span>Имя пользователя</span>
+                    </div>
+                    <img width="500" height="400" src="images/noavatar.png" alt="No avatar">
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-two wrapper">
+        <div class="hero-two__inner">
+            <div class="hero-two__image">
+                <div class="hero-two__image-inner">
+                    Коротко о картинке
+                </div>
+                <img width="500" height="400" src="images/hero2_bg.jpg" alt="Hero 2">
+            </div>
+            <div class="hero-two__text">
+                <span class="curved-text">О нас</span>
+                <h2 class="title">Что мы делаем и кто мы</h2>
+                <span class="hero-two__sub-text">Текст о нас</span>
+                <ul class="hero-two__text-list">
+                    <li class="hero-two__text-item">
+                        <span>
+                            Пункт 1
+                        </span>
+                        <span class="hero-two__sub-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloribus hic impedit natus nulla qui sint voluptatum? Magnam, recusandae, voluptates.</span>
+                    </li>
+                    <li class="hero-two__text-item">
+                        <span>
+                            Пункт 1
+                        </span>
+                        <span class="hero-two__sub-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloribus hic impedit natus nulla qui sint voluptatum? Magnam, recusandae, voluptates.</span>
+                    </li>
+                    <li class="hero-two__text-item">
+                        <span>
+                            Пункт 1
+                        </span>
+                        <span class="hero-two__sub-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloribus hic impedit natus nulla qui sint voluptatum? Magnam, recusandae, voluptates.</span>
+                    </li>
+                </ul>
+                <button class="btn hero-two__btn">Подробнее</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="news">
+        <div class="news__inner wrapper">
+            <div class="global-title">
+                <span class="curved-text">Узнайте нас подробнее</span>
+                <h2 class="title">Новости</h2>
+            </div>
+            <div class="news__inner-content">
+                <article class="news__item">
+                    <img width="500" height="400" src="images/new.jpg" alt="One">
+                    <div class="news__item-inner">
+                        <button class="btn">10 март 2025</button>
+                        <span> Автор 1 комментарии 2</span>
+                        <h3 class="global-h3">Новость 1</h3>
+                    </div>
+                </article>
+                <article class="news__item">
+                    <img width="500" height="400" src="images/new_one.jpg" alt="Two">
+                    <div class="news__item-inner">
+                        <button class="btn">10 март 2025</button>
+                        <span> Автор 2 комментарии 5</span>
+                        <h3 class="global-h3">Новость 2</h3>
+                    </div>
+                </article>
+                <article class="news__item">
+                    <img width="500" height="400" src="images/new_two.jpg" alt="Three">
+                    <div class="news__item-inner">
+                        <button class="btn">10 март 2025</button>
+                        <span> Автор 3 комментарии 1</span>
+                        <h3 class="global-h3">Новость 3</h3>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer__inner wrapper">
+        <div class="footer__logo">
+            <div class="footer__logo top-contacts__logo">Agro</div>
+        </div>
+        <nav class="footer__menu">
+            <span class="headline">Меню</span>
+            <br>
+            <ul class="footer-menu__list">
+                <li class="top-menu__item">Home</li>
+                <li class="top-menu__item">About</li>
+                <li class="top-menu__item">Services</li>
+                <li class="top-menu__item">Projects</li>
+                <li class="top-menu__item">Contact</li>
+            </ul>
+        </nav>
+        <div class="footer__news">
+            <nav class="footer__menu">
+                <span class="headline">Авторы</span>
+                <br>
+                <ul class="footer-menu__list">
+                    <li class="top-menu__item">Шухратзода Мирзоолимхон группа ТС 32 факультет : АТИ</li>
+                    <li class="top-menu__item">Таджибаев Абубакр Анварджонович АТИ ТС-32</li>
+                    <li class="top-menu__item">Алямов Саидамир Саиднабиевич АТИ АИ-37</li>
+                    <li class="top-menu__item">Сатторов Сайид Джавохир Джахонгирович АТИ АБ-21</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__contacts">2025</div>
+    </div>
+</footer>
 </body>
 </html>
