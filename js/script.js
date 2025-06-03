@@ -101,6 +101,41 @@ document.addEventListener("DOMContentLoaded", () => {
         searchPopup.style.display = 'none';
     });
 
+	//Динамическое добавление блока
+
+    const articlesData = [
+        {
+            category: 'Техника',
+            title: 'Тракторы',
+            image: 'images/article.png',
+            alt: 'image one'
+        },
+        {
+            category: 'Hi-Tech',
+            title: 'Дроны',
+            image: 'images/article_one.png',
+            alt: 'image two'
+        },
+        {
+            category: 'Контроль',
+            title: 'Система контроля',
+            image: 'images/article_two.png',
+            alt: 'image three'
+        }
+    ];
+
+    const container = document.getElementById('articlesContainer');
+
+    articlesData.forEach(article => {
+        const articleHTML = `
+            <article class="articles__item">
+                <span class="curved-text">${article.category}</span>
+                <h3 class="dynamic-title">${article.title}</h3>
+                <img src="${article.image}" alt="${article.alt}">
+            </article>
+        `;
+        container.insertAdjacentHTML('beforeend', articleHTML);
+    });
 
 });
 
